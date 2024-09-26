@@ -27,23 +27,24 @@ To run this project, ensure you have the following:
 
 2. Create a virtual environment and activate it:
 
-python -m venv env
+    python -m venv env
 
-On Windows
-.\env\Scripts\activate
+    On Windows:
+        .\env\Scripts\activate
 
-On macOS/Linux
-source env/bin/activate
+    On macOS/Linux:
+        source env/bin/activate
 
 3. Install the required dependencies:
-pip install -r requirements.txt
 
-Run the Chatbot:
+    pip install -r requirements.txt
 
-4. To launch the Streamlit interface, run the following command:
-streamlit run chatbot.py
+4. Run the Chatbot:
+
+    To launch the Streamlit interface, run the following command:
+        streamlit run chatbot.py
 
 5. Testing in Jupyter Notebook:
 
-Open chatbot.ipynb in Jupyter and run the cells to test the chatbot's functionality.
+    Open chatbot.ipynb in Jupyter and run the cells to test the chatbot's functionality.
 
