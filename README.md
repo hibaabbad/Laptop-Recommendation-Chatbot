@@ -28,9 +28,11 @@ To run this project, ensure you have the following:
 2. Create a virtual environment and activate it:
 
 python -m venv env
-# On Windows
+
+On Windows
 .\env\Scripts\activate
-# On macOS/Linux
+
+On macOS/Linux
 source env/bin/activate
 
 3. Install the required dependencies:
