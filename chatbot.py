@@ -21,11 +21,10 @@ st.title("Laptop Recommendation Chatbot")
 # Cache for loading data
 @st.cache_data
 def load_data(file_path):
-    # Load the document
     loader = CSVLoader(file_path, encoding='ISO-8859-1')
     return loader.load()
 
-# Cache for splitting documents (prepend underscore to make it non-hashable)
+# Cache for splitting documents
 @st.cache_data
 def split_documents(_data):
     # Split the data into chunks
@@ -35,7 +34,6 @@ def split_documents(_data):
 # Cache for loading embeddings
 @st.cache_resource
 def load_embeddings(model_name):
-    # Load the embedding model
     return HuggingFaceEmbeddings(model_name=model_name)
 
 # Cache for initializing the Groq model
@@ -64,7 +62,7 @@ if not api_key:
 llm_groq = init_groq_model(api_key, 'llama3-8b-8192')
 
 # Set up Chroma vector store and retriever
-vectorstore = setup_vector_store(docs, embeddings)  # Now using _docs to avoid hash error
+vectorstore = setup_vector_store(docs, embeddings)  
 retriever = vectorstore.as_retriever()
 
 # History aware retriever setup
